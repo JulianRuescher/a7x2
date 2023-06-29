@@ -42,10 +42,8 @@ public class ItemProcessor implements ItemProcessor_I {
 			sevenSome = new SevenSome<Item>();
 			sevenSomeMap.put(itemColor, sevenSome);
 		}//if
-        //append item to sevenSome in sevenSomeMap
-		sevenSome.add(item);
-        //return sevenSome if this is full
-		return (sevenSome.isFull()) ? sevenSomeMap.remove(itemColor) : null;
+        //add item and return sevenSome if this is full
+		return (sevenSome.addElement(item)) ? sevenSomeMap.remove(itemColor) : null;
 	}//method
 	
 	/**

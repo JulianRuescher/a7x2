@@ -24,28 +24,22 @@ public class SevenSome<T> {
 	
     
     
-	/**
-	 * The method add() adds an element to the SevenSome.
+	/**	
+	 * The method addElement() adds an element to the SevenSome.
 	 * 
 	 * @param	T	element to add
-	 * @return	true if added, false if SevenSome is full or SevenSome contains this element
+	 * @return	true if sevenSome if full, else false
 	 */
-	public boolean add( T element) {
-		//check if SevenSOme is full
-		if (isFull()) {return false;}
-		//check if SevenSOme contains element already
-		for (T elementOfSeven : listOfSeven) {
-			if (elementOfSeven.equals(element)) {return false;}
-		}//for
+	public boolean addElement( T element) {
+//		//check if SevenSOme contains element already
+//		for (T elementOfSeven : listOfSeven) {
+//			if (elementOfSeven.equals(element)) {return false;}
+//		}//for
 		//add element
-		return listOfSeven.add(element);
+		listOfSeven.add(element);
+		return (listOfSeven.size() >= 7) ? true : false;
 	}//method
-	
-	
-	//TODO Add an is full in One return true when full
 
-	
-	
 	
 	/**
 	 * The method get() returns the element at given position.
@@ -59,13 +53,5 @@ public class SevenSome<T> {
 		return listOfSeven.get(position);
 	}//method
 	
-	/**
-	 * The method isFull() checks if the SevenSome contains seven or more Elements.
-	 * @return	true if full, else false
-	 */
-	public boolean isFull() {
-		return (listOfSeven.size() >= 7) ? true : false;
-	}//method
-    
 	
 }//class

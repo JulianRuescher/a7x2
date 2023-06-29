@@ -14,7 +14,7 @@ class UnitTestForItemProcessor {
 		final ItemProcessor itemProcessor = new ItemProcessor();
 		
 		assertNotNull(itemProcessor);
-	}
+	}//test
 
 	@Test
 	void testReset() {
@@ -24,18 +24,26 @@ class UnitTestForItemProcessor {
 			SevenSome<Item> returnedSevenSome = itemProcessor.process(new Item(Color.RED, Size.TINY, Weight.LIGHT, (long)i));
 			assertNull(returnedSevenSome);
 			itemProcessor.reset();
-		}
-	}
+		}//for
+	}//test
 	
 	@Test
 	void testProcess() {		
 		final ItemProcessor itemProcessor = new ItemProcessor();
 		
 		for (int i=0;i<=5;i++) {
-			SevenSome<Item> returnedSevenSome = itemProcessor.process(new Item(Color.RED, Size.TINY, Weight.LIGHT, (long)i));
-			System.out.println(returnedSevenSome);
-		}
+			itemProcessor.process(new Item(Color.RED, Size.TINY, Weight.LIGHT, (long)i));
+		}//for
 		SevenSome<Item> returnedSevenSome = itemProcessor.process(new Item(Color.RED, Size.TINY, Weight.LIGHT, 6L));
 		assertNotNull(returnedSevenSome);
-	}
+	}//test
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
