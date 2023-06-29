@@ -12,6 +12,8 @@ import thingy.*;
  * @version		28.06.2023
  */
 public interface ItemProcessor_I{
+	
+	
     /**
      * process Item and return SevenSome if present
      * 
@@ -24,4 +26,6 @@ public interface ItemProcessor_I{
      * reset the Item Processor
      */
     void reset();
+    
+    
 }//interface

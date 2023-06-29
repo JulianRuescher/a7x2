@@ -31,10 +31,13 @@ public class SevenSome<T> {
 	 * @return	true if added, false if SevenSome is full or SevenSome contains this element
 	 */
 	public boolean add( T element) {
-		if (listOfSeven.size() >= 7) {return false;}
+		//check if SevenSOme is full
+		if (isFull()) {return false;}
+		//check if SevenSOme contains element already
 		for (T elementOfSeven : listOfSeven) {
 			if (elementOfSeven.equals(element)) {return false;}
-		}
+		}//for
+		//add element
 		return listOfSeven.add(element);
 	}//method
 	
@@ -44,7 +47,9 @@ public class SevenSome<T> {
 	 * @return	element if position in range and element is present, else null
 	 */
 	public T get( int position) {
+		//return null if position is out of range
 		if (position >= listOfSeven.size() || position < 0) {return null;}
+		//get and return element
 		return listOfSeven.get(position);
 	}//method
 	
@@ -53,8 +58,7 @@ public class SevenSome<T> {
 	 * @return	true if full, else false
 	 */
 	public boolean isFull() {
-		if (listOfSeven.size() >= 7) {return false;}
-		return true;
+		return (listOfSeven.size() >= 7) ? true : false;
 	}//method
     
 	
