@@ -4,10 +4,12 @@ import sevenSome.*;
 import thingy.*;
 
 
+
 /**
- * Item Processor - see task
+ * A ItemProcessor processes Items.
  * 
- * Process Items
+ * @author		Julian Rüscher
+ * @version		28.06.2023
  */
 public interface ItemProcessor_I{
     /**
