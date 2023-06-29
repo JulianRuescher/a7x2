@@ -41,6 +41,12 @@ public class SevenSome<T> {
 		return listOfSeven.add(element);
 	}//method
 	
+	
+	//TODO Add an is full in One return true when full
+
+	
+	
+	
 	/**
 	 * The method get() returns the element at given position.
 	 * @param	position	position in SevenSome
