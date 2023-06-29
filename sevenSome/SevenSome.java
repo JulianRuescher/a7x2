@@ -31,6 +31,9 @@ public class SevenSome<T> {
 	 * @return	true if sevenSome if full, else false
 	 */
 	public boolean addElement( T element) {
+		//check parameters
+		assert listOfSeven.size() < 7 : "sevenSome is already full";
+		assert element != null : "element cant be null";
 //		//check if SevenSOme contains element already
 //		for (T elementOfSeven : listOfSeven) {
 //			if (elementOfSeven.equals(element)) {return false;}
