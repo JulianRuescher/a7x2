@@ -34,6 +34,7 @@ public class ItemProcessor implements ItemProcessor_I {
     public SevenSome<Item> process(Item item) {
         //Check input parameters
 		assert null != item : "card can't be null";
+		
 	    //get item color
 		final Color itemColor = item.getColor();
         //if color not in sevenSomeMap put it in with an new sevenSome
